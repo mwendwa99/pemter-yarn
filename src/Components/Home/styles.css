@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+* {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+}
+.home-body {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: 40px;
+  top: 101px;
+
+  background-color: red;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.MuiButton-textSizeLarge {
+  text-transform: capitalize !important;
+}
+.MuiTypography-colorSecondary {
+  color: yellow !important;
+}

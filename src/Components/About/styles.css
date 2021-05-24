@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap");
+
+* {
+  font-family: "Cabin", sans-serif !important;
+
+  margin: 0;
+  border: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+.about-body {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 391.63px;
+}
+.about-body > img {
+  width: 100%;
+}
+.MuiTypography-colorTextSecondary {
+  color: black !important;
+}
+h2 {
+  font-size: 72px;
+  background: -webkit-linear-gradient(
+    rgba(251, 227, 18, 1),
+    rgba(232, 79, 126, 0.9)
+  ) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  font-weight: 700;
+}
