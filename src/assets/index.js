@@ -29,6 +29,10 @@ const Images = {
     about: require('./about.png').default,
     contactBtn: require('./contactBtn.png').default,
     priceBtn: require('./priceBtn.png').default,
+    slide1: require('./slide1.png').default,
+    slide2: require('./slide2.png').default,
+    slide3: require('./slide3.png').default,
+    slide4: require('./slide4.png').default,
 
 }
 
