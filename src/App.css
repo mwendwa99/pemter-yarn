@@ -10,3 +10,28 @@ html {
   -o-background-size: cover;
   background-size: cover;
 }
+h2 {
+  font-size: 72px;
+  background: -webkit-linear-gradient(
+    rgba(251, 227, 18, 1),
+    rgba(232, 79, 126, 0.9)
+  ) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  font-weight: 700;
+}
+h3 {
+  font-size: 30px !important;
+  background: -webkit-linear-gradient(
+    rgba(251, 227, 18, 1),
+    rgba(232, 79, 126, 0.9)
+  ) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  font-weight: 700;
+}
+@media screen and (max-width: 360px) /* and (device-height: 640px) */ /* and (-webkit-device-pixel-ratio: 4) */ {
+  h2 {
+    font-size: 36px !important;
+  }
+}

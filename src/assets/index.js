@@ -33,6 +33,7 @@ const Images = {
     slide2: require('./slide2.png').default,
     slide3: require('./slide3.png').default,
     slide4: require('./slide4.png').default,
+    linkedin: require('./linkedin.png').default,
 
 }
 

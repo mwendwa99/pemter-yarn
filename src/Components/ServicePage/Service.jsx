@@ -54,7 +54,7 @@ const Service = () => {
                             >Our Services
                             <Divider />
                             </Typography>
-                            <Typography variant="body1" maxWidth="sm" >
+                            <Typography variant="body1" style={{ maxWidth: "650px" }} >
                                 We are driven by delivering on measurable objectives and the mission you set us. <br />
                             We take pride in creating campaigns and communicationthat deliver on your bottom line, transform processes and shape your customer perception.<br />
                              We help you segment, get the right leads anddrive your business strategy to conversion.

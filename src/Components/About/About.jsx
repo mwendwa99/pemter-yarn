@@ -16,25 +16,31 @@ const useStyle = makeStyles((theme) => ({
         height: "80%",
         width: "100%",
         maxWidth: "100vw",
-        // [theme.breakpoints.down('xs')]
+        [theme.breakpoints.down('xs')]: {
+            // top: 650,
+            display: "flex",
+            flexDirection: "column",
+            // justifyContent: "center",
+            alignItems: "center",
+        },
     },
     section1: {
         height: "100%",
         width: "100%",
         maxWidth: "100vw",
-        margin: 0,
-        padding: 0,
         borderRadius: "150% 150% 0 0",
         backgroundColor: "#283772",
+        [theme.breakpoints.down('sm')]: {
+            borderRadius: '30px 30px 0 0',
+            height: "auto",
+        },
 
     },
     textMain: {
         display: "grid",
-        // flexDirection: "column",
         placeItems: "center",
-        // padding: theme.spacing(3, 3),
     },
-    section2: {
+    serviceSection: {
         width: "100%",
         maxWidth: "100vw",
         height: "100%",
@@ -44,19 +50,25 @@ const useStyle = makeStyles((theme) => ({
         alignItems: "center",
         flexDirection: "column",
         textAlign: "center",
+        padding: theme.spacing(2),
+        paddingTop: theme.spacing(12),
+        [theme.breakpoints.down('xs')]: {
+            // display: "none",
+        }
     },
     slider: {
         background: "url('" + Images.exp + "')no-repeat center center ",
-        backgroundSize: "contain",
-        display: "grid",
-        placeItems: "center",
+        backgroundSize: "auto",
+        display: "flex",
+        // placeItems: "center",
         alignItems: "center",
+        justifyContent: "center",
         width: "80%",
         height: "100%",
 
     },
     section3: {
-        padding: theme.spacing(3),
+        padding: theme.spacing(1),
         background: "#283772",
         height: "auto",
     },
@@ -80,7 +92,7 @@ const useStyle = makeStyles((theme) => ({
         },
     },
     section5: {
-        padding: theme.spacing(3),
+        padding: theme.spacing(1),
         background: "#283772",
         height: "100%",
     },
@@ -91,6 +103,9 @@ const useStyle = makeStyles((theme) => ({
     textArea: {
         padding: theme.spacing(2),
         display: "flex",
+        '& div': {
+            width: "100%",
+        },
     },
     section6: {
         padding: theme.spacing(3),
@@ -107,17 +122,17 @@ const useStyle = makeStyles((theme) => ({
 
     },
     section7: {
+        background: "#283772",
+        padding: theme.spacing(2),
+    },
+    contact: {
         height: "100%",
         background: "#283772",
-        padding: theme.spacing(3),
+        // padding: theme.spacing(5),
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
     },
-    section8: {
-        // height: "100%",
-        background: "#283772",
-        padding: theme.spacing(3),
-    },
-
-
 }));
 
 const About = () => {
@@ -134,51 +149,53 @@ const About = () => {
                                 <Typography
                                     variant="h2"
                                     color="secondary"
+                                    style={{ padding: "2rem" }}
                                 >About Us
-                        <Divider />
+                                    <Divider />
                                 </Typography>
                                 <Typography variant="body1" maxWidth="sm" >
                                     Pemter Consultancy Agency is a stem of Pemter Group Limited. We are a customer experience consultancy and a 360-degree marketing, PR and events agency.
                                     We understand the business environment and backed by in-depth intelligence, craft bespoke solutions that give your business a lasting competitive advantage.
-                            <br /><br />
-                            We are driven by delivering on measurable objectives and the mission you set us.
-                            We take pride in creating campaigns and communication that deliver on your bottom line, transform processes and shape your customer perception. We help you segment, get the right leads and drive your business strategy to conversion.
-                            <br /><br />
-                            We believe in finding a cultural connect. Building content that your customers will want to share enthusiastically on multiple platforms with their peers.
-                            Our dedicated and highly experienced team deliver a personalized and round the clock service to ensure your business is always top of mind.
-                            <br /><br />
-                            We are a Kenyan based company comprising of professionals with a wide range of experience from diverse industries such as marketing, customer experience, IT, Petroleum, Retail, Hospitality, Research, Entertainment and Events Management.
-                            Pemter Group Limited has interests in Marketing and Customer Experience Consultancy, Events, Agriculture, Real Estate, Health Care, Film Production, Research and Development, Hospitality and Automotive sectors.
-                            <br /><br />
-                            Our philosophy is grounded on integrity, fair business, value, hard work, belief in people and pioneering innovation.
-                            We look forward to a successful partnership.
-                    </Typography >
+                                    <br /><br />
+                                    We are driven by delivering on measurable objectives and the mission you set us.
+                                    We take pride in creating campaigns and communication that deliver on your bottom line, transform processes and shape your customer perception. We help you segment, get the right leads and drive your business strategy to conversion.
+                                    <br /><br />
+                                    We believe in finding a cultural connect. Building content that your customers will want to share enthusiastically on multiple platforms with their peers.
+                                    Our dedicated and highly experienced team deliver a personalized and round the clock service to ensure your business is always top of mind.
+                                    <br /><br />
+                                    We are a Kenyan based company comprising of professionals with a wide range of experience from diverse industries such as marketing, customer experience, IT, Petroleum, Retail, Hospitality, Research, Entertainment and Events Management.
+                                    Pemter Group Limited has interests in Marketing and Customer Experience Consultancy, Events, Agriculture, Real Estate, Health Care, Film Production, Research and Development, Hospitality and Automotive sectors.
+                                    <br /><br />
+                                    Our philosophy is grounded on integrity, fair business, value, hard work, belief in people and pioneering innovation.
+                                    We look forward to a successful partnership.
+                                </Typography >
                             </Grid>
-                        </Grid>
-                        {/* <div className={classes.circle} >
-                            
-                        </div> */}
+                        </Grid>s
                     </Container>
                 </section>
-                <section className={classes.section2}>
-                    <Typography variant="h2" color="secondary" gutterBottom > We provide various kind <br />    of services for you</Typography>
-                    <Divider />
-                    <div className={classes.slider}>
-                        <Carousel />
-                    </div>
+                <section className={classes.serviceSection}>
+                    <Container maxWidth='lg'>
+                        <Grid container className={classes.textMain}>
+                            <Grid item sm={9} md={9} xs={9} lg={12}>
+                                <Typography style={{ padding: '10px' }} variant="h2" color="secondary"> Our Services </Typography>
+                                <Divider />
+                                <div className={classes.slider}>
+                                    <Carousel />
+                                </div>
+                            </Grid>
+                        </Grid>
+                    </Container>
                 </section>
                 <section className={classes.section3} >
                     <Container maxWidth="lg">
-                        <Typography variant="h2" gutterBottom> Why Choose Us <br /> For Future Projects</Typography>
+                        <Typography variant="h2" gutterBottom> Why Us </Typography>
                         <Divider />
                         <Typography variant="body1" gutterBottom>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                            Eius ratione amet deleniti, praesentium odio nemo doloribus maxime, nostrum at necessitatibus quod unde, illo ullam.
-                            Cumque exercitationem a animi unde sint.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Ipsum, explicabo similique omnis laudantium ipsa, nam blanditiis velit id et neque
-                            veniam recusandae! In quas quod assumenda dicta dolorem recusandae vel!
-                    </Typography>
+                            We take the greatest care to go into an in depth analysis of your business, the competition and the market.<br />
+                            We get to understand what matters to your customer and together set clear and measurable objectives.<br />
+                            Our strategic analysis coupled with an understanding of your segmentation, <br />
+                            targeting and positioning helps craft business tactics that give you a lasting competitive advantage
+                        </Typography>
                         <div className={classes.numbers}>
                             <img src={Images.one} alt="" />
                             <img src={Images.two} alt="" />
@@ -186,9 +203,10 @@ const About = () => {
                             <img src={Images.four} alt="" />
                             <img src={Images.five} alt="" />
                         </div>
+                        <Typography variant="h3" >Let’s Build Your Competitive Advantage</Typography>
                     </Container>
                 </section>
-                <section className={classes.section4} >
+                {/* <section className={classes.section4} >
                     <Container maxWidth="lg" >
                         <div>
                             <Typography color="secondary" variant="h2" gutterBottom>Statistics</Typography>
@@ -215,11 +233,11 @@ const About = () => {
                             </div>
                         </div>
                     </Container>
-                </section>
+                </section> */}
                 <section className={classes.section5} >
                     <Container style={{ paddingTop: "3rem" }} maxWidth="lg">
                         <div>
-                            <Typography color="secondary" variant="h2" gutterBottom >Working Progress</Typography>
+                            <Typography color="secondary" variant="h2" gutterBottom >Our Approach</Typography>
                             <Typography variant="h5" gutterBottom >How Does It Work</Typography>
                             <Divider />
                         </div>
@@ -232,37 +250,29 @@ const About = () => {
                         <img src={Images.line} style={{ width: "80%", }} alt="" />
                         <div className={classes.textArea}>
                             <div>
-                                <Typography variant="h5" gutterBottom >Listen</Typography>
-                                <Typography>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                Architecto quaerat dicta eum libero earum praesentium voluptates, ipsa recusandae quo,
-                                aliquid quam, debitis commodi molestias in rerum at blanditiis harum et.
-                            </Typography>
+                                <Typography variant="h5" gutterBottom >Crafting your strategy </Typography>
+                                <Typography>Reviewing your strategic plan and anchoring your messaging on your main objectives
+                                </Typography>
                             </div>
                             <div>
-                                <Typography variant="h5" gutterBottom>Plan and Budget</Typography>
-                                <Typography>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                Architecto quaerat dicta eum libero earum praesentium voluptates, ipsa recusandae quo,
-                                aliquid quam, debitis commodi molestias in rerum at blanditiis harum et.
-                            </Typography>
+                                <Typography variant="h5" gutterBottom>Strengthening your channels </Typography>
+                                <Typography>Capitalising on every-day opportunities to build unrivalled visibility
+                                </Typography>
                             </div>
                             <div>
-                                <Typography variant="h5" gutterBottom>Work &amp; Revision</Typography>
-                                <Typography>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                Architecto quaerat dicta eum libero earum praesentium voluptates, ipsa recusandae quo,
-                                aliquid quam, debitis commodi molestias in rerum at blanditiis harum et.
-                            </Typography>
+                                <Typography variant="h5" gutterBottom>Amplifying your Brand </Typography>
+                                <Typography>Delivering creative ideas and content around your big campaign moments
+                                </Typography>
                             </div>
                             <div>
-                                <Typography variant="h5" gutterBottom>Delivery &amp; Feedback</Typography>
-                                <Typography>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                Architecto quaerat dicta eum libero earum praesentium voluptates, ipsa recusandae quo,
-                                aliquid quam, debitis commodi molestias in rerum at blanditiis harum et.
-                            </Typography>
+                                <Typography variant="h5" gutterBottom>Curating Shareable Content </Typography>
+                                <Typography>We help you cut across the cluster of messaging and leave a lasting mark in the minds of your target audience encouraging them to organically share your content.
+                                </Typography>
                             </div>
                         </div>
                     </Container>
                 </section>
-                <section className={classes.section6} >
+                {/* <section className={classes.section6} >
                     <Container style={{ paddingTop: "3rem" }} maxWidth="lg" >
                         <div>
                             <Typography variant="h2" color="secondary" gutterBottom>Testimonials</Typography>
@@ -280,9 +290,22 @@ const About = () => {
                 </section>
                 <section className={classes.section7}>
                     <Contacts />
+                </section>*/}
+                {/* <section className={classes.section7} > */}
+                <section className={classes.contact}  >
+                    {/* <div> */}
+                    {/* <Typography variant="h2"
+                        color='textSecondary'
+                    >Contact Us</Typography>
+                    <Divider style={{ marginBottom: "1rem", }} />
+                    <Typography variant="h3" >Let’s Build Your Competitive Advantage</Typography> */}
+                    {/* </div> */}
+                    {/* <div > */}
+                    <Contacts />
+                    {/* </div> */}
                 </section>
-                <section className={classes.section8} >
-                    <Typography align="left" >&copy;2021. All Rights reserved by Brian Mwendwa</Typography>
+                <section className={classes.section7} >
+                    <Typography align="left" >&copy;2021. All Rights reserved by pemtergroup</Typography>
                 </section>
             </section>
         </div>

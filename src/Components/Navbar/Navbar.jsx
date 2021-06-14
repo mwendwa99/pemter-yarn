@@ -42,7 +42,7 @@ const navBar = () => {
                             </Link>
                     </Nav.Link>
                     <Nav.Link>
-                        <Link style={{ textDecoration: "none", }} onClick={() => scroll.scrollTo(500)}>
+                        <Link style={{ textDecoration: "none", }} smooth to="/" onClick={() => scroll.scrollTo(500)}>
                             About Us
                         </Link>
                     </Nav.Link>

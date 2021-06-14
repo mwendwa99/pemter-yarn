@@ -21,7 +21,7 @@
 .MuiTypography-colorTextSecondary {
   color: black !important;
 }
-h2 {
+/* h2 {
   font-size: 72px;
   background: -webkit-linear-gradient(
     rgba(251, 227, 18, 1),
@@ -30,4 +30,4 @@ h2 {
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   font-weight: 700;
-}
+} */

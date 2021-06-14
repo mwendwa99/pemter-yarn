@@ -4,22 +4,15 @@
   font-style: normal;
   font-weight: normal;
 }
-.home-body {
-  position: absolute;
-  width: 50%;
-  height: 100%;
-  left: 40px;
-  top: 101px;
-
-  background-color: red;
-
-  display: flex;
-  flex-direction: column;
-}
 
 .MuiButton-textSizeLarge {
   text-transform: capitalize !important;
 }
 .MuiTypography-colorSecondary {
-  color: yellow !important;
+  /* color: yellow !important; */
+}
+@media screen and (device-width: 360px) /* and (device-height: 640px) */ and (-webkit-device-pixel-ratio: 4) {
+  .MuiTypography-h2 {
+    /* font-size: 36px !important; */
+  }
 }
