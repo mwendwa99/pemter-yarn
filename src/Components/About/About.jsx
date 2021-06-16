@@ -24,8 +24,8 @@ const useStyle = makeStyles((theme) => ({
             alignItems: "center",
         },
     },
-    section1: {
-        height: "100%",
+    aboutSection: {
+        height: "40rem",
         width: "100%",
         maxWidth: "100vw",
         borderRadius: "150% 150% 0 0",
@@ -41,30 +41,28 @@ const useStyle = makeStyles((theme) => ({
         placeItems: "center",
     },
     serviceSection: {
-        width: "100%",
-        maxWidth: "100vw",
-        height: "100%",
-        background: "#283772",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",
-        textAlign: "center",
-        padding: theme.spacing(2),
-        paddingTop: theme.spacing(12),
-        [theme.breakpoints.down('xs')]: {
-            // display: "none",
-        }
+        width: "100%",
+        maxWidth: "100vw",
+        height: "30rem",
+        background: "#283772",
     },
     slider: {
         background: "url('" + Images.exp + "')no-repeat center center ",
         backgroundSize: "auto",
         display: "flex",
-        // placeItems: "center",
         alignItems: "center",
         justifyContent: "center",
-        width: "80%",
-        height: "100%",
+        width: "100%",
+        height: "70%",
+        [theme.breakpoints.down('md')]: {
+            background: "#E48A4D",
+            boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+            borderRadius: "30px",
+        },
 
     },
     section3: {
@@ -142,7 +140,7 @@ const About = () => {
     return (
         <div id="about">
             <section className={classes.main}>
-                <section className={classes.section1}>
+                <section className={classes.aboutSection}>
                     <Container maxWidth="md"  >
                         <Grid container className={classes.textMain}>
                             <Grid item sm={9} md={9} xs={9} lg={12}>
@@ -170,20 +168,16 @@ const About = () => {
                                     We look forward to a successful partnership.
                                 </Typography >
                             </Grid>
-                        </Grid>s
+                        </Grid>
                     </Container>
                 </section>
-                <section className={classes.serviceSection}>
-                    <Container maxWidth='lg'>
-                        <Grid container className={classes.textMain}>
-                            <Grid item sm={9} md={9} xs={9} lg={12}>
-                                <Typography style={{ padding: '10px' }} variant="h2" color="secondary"> Our Services </Typography>
-                                <Divider />
-                                <div className={classes.slider}>
-                                    <Carousel />
-                                </div>
-                            </Grid>
-                        </Grid>
+                <section>
+                    <Container className={classes.serviceSection} maxWidth='md' >
+                        <Typography style={{ padding: '10px' }} variant="h2" color="secondary"> Our Services </Typography>
+                        <Divider />
+                        <div className={classes.slider}>
+                            <Carousel />
+                        </div>
                     </Container>
                 </section>
                 <section className={classes.section3} >

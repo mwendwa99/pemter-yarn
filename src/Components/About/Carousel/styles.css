@@ -6,6 +6,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  /* background: url("../../../assets/exp.png") no-repeat center center; */
 }
 .carousel-inner {
   width: 70%;

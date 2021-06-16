@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@200;400;500;600;700&display=swap");
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  font-family: "Cabin", sans-serif !important;
 }
 html {
   background: url(./assets/home.png) no-repeat center center fixed;
@@ -10,8 +13,8 @@ html {
   -o-background-size: cover;
   background-size: cover;
 }
-h2 {
-  font-size: 72px;
+.MuiTypography-h2 {
+  font-size: 5rem !important;
   background: -webkit-linear-gradient(
     rgba(251, 227, 18, 1),
     rgba(232, 79, 126, 0.9)
@@ -20,8 +23,8 @@ h2 {
   -webkit-text-fill-color: transparent !important;
   font-weight: 700;
 }
-h3 {
-  font-size: 30px !important;
+.MuiTypography-h3 {
+  font-size: 2rem !important;
   background: -webkit-linear-gradient(
     rgba(251, 227, 18, 1),
     rgba(232, 79, 126, 0.9)
@@ -30,8 +33,22 @@ h3 {
   -webkit-text-fill-color: transparent !important;
   font-weight: 700;
 }
-@media screen and (max-width: 360px) /* and (device-height: 640px) */ /* and (-webkit-device-pixel-ratio: 4) */ {
-  h2 {
-    font-size: 36px !important;
+.MuiTypography-h5 {
+  font-size: 1.5rem !important;
+}
+.MuiTypography-body1 {
+  font-size: 1rem !important;
+  font-weight: 400 !important;
+}
+@media screen and (max-width: 1125px) {
+  .MuiTypography-h2 {
+    font-size: 3rem !important;
+  }
+  .MuiTypography-h5 {
+    font-size: 1rem !important;
+  }
+  .MuiTypography-body1 {
+    font-size: 1rem !important;
+    font-weight: 200 !important;
   }
 }

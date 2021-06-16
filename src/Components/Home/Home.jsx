@@ -43,7 +43,7 @@ export default function Home() {
     return (
         <div>
             <div id='home' style={{ flexGrow: 1 }} >
-                <Grid className={classes.root} container spacing={3}>
+                <Grid className={classes.root} container spacing={24}>
                     <Grid item sm={12} >
                         <Typography color="secondary" variant="h2" gutterBottom>
                             We  Create Brands,<br /> We Design Growth.

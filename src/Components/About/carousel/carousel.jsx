@@ -15,7 +15,16 @@ const useStyle = makeStyles((theme) => ({
         textAlign: "left",
         display: "flex",
         flexDirection: "row",
-        gap: 50
+        gap: 20,
+        [theme.breakpoints.down('sm')]: {
+            gap: 10,
+
+        },
+        [theme.breakpoints.down('xs')]: {
+            '& img': {
+                display: "none",
+            }
+        },
     },
 }));
 
