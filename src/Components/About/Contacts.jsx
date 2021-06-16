@@ -6,11 +6,9 @@ import { animateScroll as scroll } from 'react-scroll'
 
 const useStyles = makeStyles((theme) => ({
     contact: {
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-
-
+        // display: "flex",
+        // flexDirection: "column",
+        // justifyContent: "space-between",
     },
     contactSection2: {
         display: "flex",
@@ -38,11 +36,14 @@ const Contacts = () => {
 
     return (
         <Container className={classes.contact} >
-            <Typography variant="h2"
-
-            >Contact Us</Typography>
-            <Divider style={{ marginBottom: "1rem", }} />
-            <Typography variant="h3" >Let’s Build Your Competitive Advantage</Typography>
+            <div>
+                <Typography
+                    variant="h2"
+                    style={{ paddingTop: "5rem" }}
+                >Contact Us</Typography>
+                <Divider style={{ marginBottom: "1rem", }} />
+                <Typography variant="h3" >Let’s Build Your Competitive Advantage</Typography>
+            </div>
             <div className={classes.contactSection2}>
                 <div>
                     <Link className={classes.links} to='/service' onClick={() => scroll.scrollToTop(0, 0)} >

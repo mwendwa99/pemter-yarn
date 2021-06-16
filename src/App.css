@@ -45,10 +45,18 @@ html {
     font-size: 3rem !important;
   }
   .MuiTypography-h5 {
-    font-size: 1rem !important;
+    font-size: 0.9rem !important;
   }
+  .MuiTypography-h4 {
+    font-size: 0.95rem !important;
+  }
+}
+@media screen and(max-width: 600px) {
   .MuiTypography-body1 {
-    font-size: 1rem !important;
+    font-size: 0.6rem !important;
     font-weight: 200 !important;
+  }
+  .MuiTypography-h5 {
+    font-size: 0.8rem !important;
   }
 }

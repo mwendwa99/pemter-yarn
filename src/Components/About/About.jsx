@@ -13,11 +13,11 @@ const useStyle = makeStyles((theme) => ({
         background: "rgba(0,0,0,0)",
         textAlign: "center",
         top: 570,
-        height: "80%",
+        height: "100%",
         width: "100%",
         maxWidth: "100vw",
-        [theme.breakpoints.down('xs')]: {
-            // top: 650,
+        [theme.breakpoints.down('sm')]: {
+            top: 520,
             display: "flex",
             flexDirection: "column",
             // justifyContent: "center",
@@ -30,10 +30,10 @@ const useStyle = makeStyles((theme) => ({
         maxWidth: "100vw",
         borderRadius: "150% 150% 0 0",
         backgroundColor: "#283772",
-        [theme.breakpoints.down('sm')]: {
-            borderRadius: '30px 30px 0 0',
-            height: "auto",
-        },
+        // [theme.breakpoints.down('md')]: {
+        //     // borderRadius: '30px 30px 0 0',
+        //     height: "30rem",
+        // },
 
     },
     textMain: {
@@ -65,12 +65,12 @@ const useStyle = makeStyles((theme) => ({
         },
 
     },
-    section3: {
-        padding: theme.spacing(1),
+    whySection: {
+        paddingTop: theme.spacing(5),
         background: "#283772",
         height: "auto",
     },
-    numbers: {
+    whySectionNumbers: {
         display: "flex",
         justifyContent: "Center",
         padding: theme.spacing(3, 0),
@@ -89,17 +89,17 @@ const useStyle = makeStyles((theme) => ({
             width: "100%",
         },
     },
-    section5: {
-        padding: theme.spacing(1),
+    approachSection: {
+        paddingTop: theme.spacing(5),
         background: "#283772",
-        height: "100%",
+        height: "50rem",
     },
-    icons: {
+    approachSectionIcons: {
         display: "flex",
+        width: "100%",
         justifyContent: "space-around",
     },
     textArea: {
-        padding: theme.spacing(2),
         display: "flex",
         '& div': {
             width: "100%",
@@ -116,20 +116,21 @@ const useStyle = makeStyles((theme) => ({
         "& img": {
             maxWidth: "300px"
         },
-        // justifyContent: "center",
 
     },
-    section7: {
+    rightsSection: {
         background: "#283772",
+        width: "100%",
         padding: theme.spacing(2),
     },
-    contact: {
-        height: "100%",
+    sectionContact: {
+        height: "30rem",
+        width: "100%",
         background: "#283772",
-        // padding: theme.spacing(5),
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
+        // paddingTop: theme.spacing(5),
+        [theme.breakpoints.down('sm')]: {
+            height: "40rem"
+        },
     },
 }));
 
@@ -171,17 +172,17 @@ const About = () => {
                         </Grid>
                     </Container>
                 </section>
-                <section>
+                <section >
                     <Container className={classes.serviceSection} maxWidth='md' >
-                        <Typography style={{ padding: '10px' }} variant="h2" color="secondary"> Our Services </Typography>
+                        <Typography style={{ paddingBottom: '3rem', paddingTop: "3rem" }} variant="h2" color="secondary"> Our Services </Typography>
                         <Divider />
                         <div className={classes.slider}>
                             <Carousel />
                         </div>
                     </Container>
                 </section>
-                <section className={classes.section3} >
-                    <Container maxWidth="lg">
+                <section className={classes.whySection} >
+                    <Container maxWidth="md">
                         <Typography variant="h2" gutterBottom> Why Us </Typography>
                         <Divider />
                         <Typography variant="body1" gutterBottom>
@@ -190,13 +191,23 @@ const About = () => {
                             Our strategic analysis coupled with an understanding of your segmentation, <br />
                             targeting and positioning helps craft business tactics that give you a lasting competitive advantage
                         </Typography>
-                        <div className={classes.numbers}>
-                            <img src={Images.one} alt="" />
-                            <img src={Images.two} alt="" />
-                            <img src={Images.three} alt="" />
-                            <img src={Images.four} alt="" />
-                            <img src={Images.five} alt="" />
-                        </div>
+                        <Grid className={classes.whySectionNumbers}>
+                            <Grid item sm={6}>
+                                <img width="100%" src={Images.one} alt="" />
+                            </Grid>
+                            <Grid item sm={6}>
+                                <img width="100%" src={Images.two} alt="" />
+                            </Grid>
+                            <Grid item sm={6}>
+                                <img width="100%" src={Images.three} alt="" />
+                            </Grid>
+                            <Grid item sm={6}>
+                                <img width="100%" src={Images.four} alt="" />
+                            </Grid>
+                            <Grid item sm={6}>
+                                <img width="100%" src={Images.five} alt="" />
+                            </Grid>
+                        </Grid>
                         <Typography variant="h3" >Let’s Build Your Competitive Advantage</Typography>
                     </Container>
                 </section>
@@ -228,39 +239,47 @@ const About = () => {
                         </div>
                     </Container>
                 </section> */}
-                <section className={classes.section5} >
+                <section className={classes.approachSection} >
                     <Container style={{ paddingTop: "3rem" }} maxWidth="lg">
                         <div>
                             <Typography color="secondary" variant="h2" gutterBottom >Our Approach</Typography>
                             <Typography variant="h5" gutterBottom >How Does It Work</Typography>
                             <Divider />
                         </div>
-                        <div className={classes.icons} >
-                            <img src={Images.plan} alt="" />
-                            <img src={Images.work} alt="" />
-                            <img src={Images.listen} alt="" />
-                            <img src={Images.feedback} alt="" />
-                        </div>
-                        <img src={Images.line} style={{ width: "80%", }} alt="" />
+                        <Grid className={classes.approachSectionIcons} >
+                            <Grid item sm={6}>
+                                <img width="100%" src={Images.plan} alt="" />
+                            </Grid>
+                            <Grid item sm={6}>
+                                <img width="100%" src={Images.work} alt="" />
+                            </Grid>
+                            <Grid item sm={6}>
+                                <img width="100%" src={Images.listen} alt="" />
+                            </Grid>
+                            <Grid item sm={6}>
+                                <img width="100%" src={Images.feedback} alt="" />
+                            </Grid>
+                        </Grid>
+                        <img width="100%" src={Images.line} style={{ width: "80%", }} alt="" />
                         <div className={classes.textArea}>
                             <div>
                                 <Typography variant="h5" gutterBottom >Crafting your strategy </Typography>
-                                <Typography>Reviewing your strategic plan and anchoring your messaging on your main objectives
+                                <Typography variant="body1">Reviewing your strategic plan and anchoring your messaging on your main objectives
                                 </Typography>
                             </div>
                             <div>
                                 <Typography variant="h5" gutterBottom>Strengthening your channels </Typography>
-                                <Typography>Capitalising on every-day opportunities to build unrivalled visibility
+                                <Typography variant="body1" >Capitalising on every-day opportunities to build unrivalled visibility
                                 </Typography>
                             </div>
                             <div>
                                 <Typography variant="h5" gutterBottom>Amplifying your Brand </Typography>
-                                <Typography>Delivering creative ideas and content around your big campaign moments
+                                <Typography variant="body1">Delivering creative ideas and content around your big campaign moments
                                 </Typography>
                             </div>
                             <div>
                                 <Typography variant="h5" gutterBottom>Curating Shareable Content </Typography>
-                                <Typography>We help you cut across the cluster of messaging and leave a lasting mark in the minds of your target audience encouraging them to organically share your content.
+                                <Typography variant="body1">We help you cut across the cluster of messaging and leave a lasting mark in the minds of your target audience encouraging them to organically share your content.
                                 </Typography>
                             </div>
                         </div>
@@ -286,19 +305,10 @@ const About = () => {
                     <Contacts />
                 </section>*/}
                 {/* <section className={classes.section7} > */}
-                <section className={classes.contact}  >
-                    {/* <div> */}
-                    {/* <Typography variant="h2"
-                        color='textSecondary'
-                    >Contact Us</Typography>
-                    <Divider style={{ marginBottom: "1rem", }} />
-                    <Typography variant="h3" >Let’s Build Your Competitive Advantage</Typography> */}
-                    {/* </div> */}
-                    {/* <div > */}
+                <section className={classes.sectionContact}  >
                     <Contacts />
-                    {/* </div> */}
                 </section>
-                <section className={classes.section7} >
+                <section className={classes.rightsSection} >
                     <Typography align="left" >&copy;2021. All Rights reserved by pemtergroup</Typography>
                 </section>
             </section>
