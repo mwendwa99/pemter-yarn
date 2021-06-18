@@ -30,10 +30,6 @@ const useStyle = makeStyles((theme) => ({
         maxWidth: "100vw",
         borderRadius: "150% 150% 0 0",
         backgroundColor: "#283772",
-        // [theme.breakpoints.down('md')]: {
-        //     // borderRadius: '30px 30px 0 0',
-        //     height: "30rem",
-        // },
 
     },
     textMain: {

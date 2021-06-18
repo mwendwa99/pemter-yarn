@@ -30,7 +30,7 @@ const navBar = () => {
 
     return (
         <Navbar className={classes.root} variant='dark' expand="lg" fixed="top">
-            <Navbar.Brand href="#home">
+            <Navbar.Brand href="/">
                 <img src={Images.logo} alt="" />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -39,7 +39,7 @@ const navBar = () => {
                     <Nav.Link>
                         <Link style={{ textDecoration: "none", }} smooth to="/" onClick={() => scroll.scrollToTop(0, 0)} >
                             Home
-                            </Link>
+                        </Link>
                     </Nav.Link>
                     <Nav.Link>
                         <Link style={{ textDecoration: "none", }} smooth to="/" onClick={() => scroll.scrollTo(500)}>
@@ -49,7 +49,7 @@ const navBar = () => {
                     <Nav.Link>
                         <Link style={{ textDecoration: "none", }} to='/service' onClick={() => scroll.scrollToTop(0, 0)}>
                             Services
-                            </Link>
+                        </Link>
                     </Nav.Link>
                     <Nav.Link  >
                         <Link style={{ textDecoration: "none", }} to='/' onClick={() => scroll.scrollTo(10000)}>

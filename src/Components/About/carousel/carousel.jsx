@@ -41,7 +41,7 @@ const CarouselSlider = () => {
         >
             <Carousel.Item bsPrefix='carousel-item' interval={500}>
                 <div className={classes.item} >
-                    <img lassName="d-block" style={{ objectFit: "contain" }} src={Images.slide2} alt="" />
+                    <img lassName="d-block" style={{ objectFit: "contain" }} src={Images.slide2new} alt="" />
                     <div>
                         <Typography varaint="h2" gutterBottom >Marketing Service</Typography>
                         <Typography variant="body2" gutterBottom>
@@ -57,7 +57,7 @@ const CarouselSlider = () => {
             </Carousel.Item>
             <Carousel.Item interval={500}>
                 <div className={classes.item}>
-                    <img style={{ objectFit: "contain" }} src={Images.slide1} alt="" />
+                    <img style={{ objectFit: "contain" }} src={Images.slide1new} alt="" />
                     <div>
                         <Typography varaint="h2" gutterBottom >Customer Experience</Typography>
                         <Typography variant="body2" gutterBottom>
@@ -72,7 +72,7 @@ const CarouselSlider = () => {
             </Carousel.Item>
             <Carousel.Item >
                 <div className={classes.item} >
-                    <img style={{ objectFit: "contain" }} src={Images.slide3} alt="" />
+                    <img style={{ objectFit: "contain" }} src={Images.slide3new} alt="" />
                     <div>
                         <Typography varaint="h2" gutterBottom >PR and Media Relations</Typography>
                         <Typography variant="body2" gutterBottom >
@@ -87,7 +87,7 @@ const CarouselSlider = () => {
             </Carousel.Item>
             <Carousel.Item >
                 <div className={classes.item} >
-                    <img style={{ objectFit: "contain" }} src={Images.slide4} alt="" />
+                    <img style={{ objectFit: "contain" }} src={Images.slide4new} alt="" />
 
                     <div>
                         <Typography varaint="h2" gutterBottom >Events and Content Production</Typography>
