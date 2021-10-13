@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles.css';
-import { Container, makeStyles, Typography, Divider, Grid } from '@material-ui/core';
+import { Container, makeStyles, Typography, Grid } from '@material-ui/core';
 import Images from '../../assets/index'
 
 
